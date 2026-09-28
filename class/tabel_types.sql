@@ -211,3 +211,23 @@ delete from VITECH_DEV_DB.bronze.CUSTOMER
 -- 0 0 1 * * -- First day of month
   
 Displaying class-16.txt.
+
+
+
+
+cron exmaples.
+
+
+Frequency	Schedule Expression	Full Snowflake Clause
+
+Every 5 minutes	*/5 * * * *	SCHEDULE = 'USING CRON */5 * * * * UTC'
+
+Every 15 minutes	*/15 * * * *	SCHEDULE = 'USING CRON */15 * * * * UTC'
+
+Every hour at minute 0	0 * * * *	SCHEDULE = 'USING CRON 0 * * * * UTC'
+
+Daily at Midnight	0 0 * * *	SCHEDULE = 'USING CRON 0 0 * * * UTC'
+Daily at 6:00 AM	0 6 * * *	SCHEDULE = 'USING CRON 0 6 * * * UTC'
+Mon–Fri at 8:00 AM	0 8 * * 1-5	SCHEDULE = 'USING CRON 0 8 * * 1-5 America/New_York'
+Every Sunday at 11:00 PM	0 23 * * 0	SCHEDULE = 'USING CRON 0 23 * * 0 UTC'
+1st of every month at 2:00 AM	0 2 1 * *	SCHEDULE = 'USING CRON 0 2 1 * * UTC'
